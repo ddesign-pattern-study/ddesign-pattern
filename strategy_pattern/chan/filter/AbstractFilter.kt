@@ -1,6 +1,6 @@
-package pattern.strategy.chan.filter
+package filter
 
-import pattern.strategy.chan.Air
+import Air
 
 /**
  * 필터

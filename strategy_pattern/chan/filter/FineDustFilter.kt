@@ -1,6 +1,5 @@
-package pattern.strategy.chan.filter
-
-import pattern.strategy.chan.Air
+package filter
+import Air
 
 class FineDustFilter : AbstractFilter() {
 

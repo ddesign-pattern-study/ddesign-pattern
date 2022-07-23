@@ -1,9 +1,7 @@
-package pattern.strategy.chan
-
-import pattern.strategy.chan.filter.AbstractFilter
-import pattern.strategy.chan.humidifier.AbstractDehumidifier
-import pattern.strategy.chan.humidifier.AbstractHumidifier
-import pattern.strategy.chan.notifier.AbstractNotifier
+import filter.AbstractFilter
+import humidifier.AbstractDehumidifier
+import humidifier.AbstractHumidifier
+import notifier.AbstractNotifier
 
 /**
  * 공기 청정기

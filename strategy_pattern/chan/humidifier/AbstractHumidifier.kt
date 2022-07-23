@@ -1,5 +1,6 @@
-package pattern.strategy.chan.humidifier
-import pattern.strategy.chan.Air
+package humidifier
+
+import Air
 
 /**
  * 가습 기능

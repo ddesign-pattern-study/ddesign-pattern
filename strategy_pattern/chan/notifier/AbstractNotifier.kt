@@ -1,6 +1,6 @@
-package pattern.strategy.chan.notifier
+package notifier
 
-import pattern.strategy.chan.Air
+import Air
 
 /**
  * 알림 기능

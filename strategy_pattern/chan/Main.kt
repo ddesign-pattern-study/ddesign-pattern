@@ -1,6 +1,4 @@
-package pattern.strategy.chan
-
-import pattern.strategy.chan.filter.DeodorizationFilter
+import filter.DeodorizationFilter
 
 fun main() {
 
