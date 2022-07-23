@@ -13,9 +13,7 @@ class YoutubePersonalAccount(
     override val subscribers: MutableSet<YoutubeChannelObserver> = mutableSetOf() // 개인 채널 구독자 목록
 ) : YoutubeChannel(), YoutubeChannelObserver {
 
-    private val subscribedChannels: YoutubeSubscribedChannels by lazy { // 구독한 채널 목록
-        YoutubeSubscribedChannels(this)
-    }
+    private val subscribedChannels: YoutubeSubscribedChannels = YoutubeSubscribedChannels(this) // 서인님 피드백
 
     override fun update(channel: YoutubeChannel) {
         channel.getLatestVideo()?.let {
