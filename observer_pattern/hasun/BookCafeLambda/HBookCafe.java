@@ -1,4 +1,4 @@
-package chapter2.BookCafeLmbda;
+package BookCafeLmbda;
 
 import java.util.ArrayList;
 import java.util.List;

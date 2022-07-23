@@ -1,4 +1,4 @@
-package chapter2.BookCafe;
+package BookCafe;
 
 public class BookCafeStation {
     public static void main(String[] args) {

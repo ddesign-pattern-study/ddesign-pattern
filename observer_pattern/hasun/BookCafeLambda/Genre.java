@@ -1,4 +1,4 @@
-package chapter2.BookCafeLmbda;
+package BookCafeLmbda;
 
 public enum Genre {
     ROMANCE, THRILLER, DRAMA, HORROR, COMEDY

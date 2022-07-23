@@ -1,4 +1,4 @@
-package chapter2.WeatherORama;
+package WeatherORama;
 
 public interface Subject {
     public void registerObserver(Observer o);   // 옵저버 등록

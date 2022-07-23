@@ -1,4 +1,4 @@
-package chapter2.BookCafe;
+package BookCafe;
 
 import java.util.ArrayList;
 import java.util.List;

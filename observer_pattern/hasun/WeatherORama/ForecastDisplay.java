@@ -1,4 +1,4 @@
-package chapter2.WeatherORama;
+package WeatherORama;
 
 public class ForecastDisplay implements Observer, DisplayElement {
     private float currentPressure = 29.92f;

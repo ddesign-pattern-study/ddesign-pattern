@@ -1,4 +1,4 @@
-package chapter2.BookCafe;
+package BookCafe;
 
 public class RomanceObserver implements Observer{
     private HBookCafe hBookCafe;

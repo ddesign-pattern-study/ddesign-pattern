@@ -1,4 +1,4 @@
-package chapter2.BookCafe;
+package BookCafe;
 
 public class ThrillerObserver implements Observer {
     private HBookCafe hBookCafe;

@@ -1,4 +1,4 @@
-package chapter2.BookCafeLmbda;
+package BookCafeLmbda;
 
 public interface Subject {
     public void registerObserver(Observer o);

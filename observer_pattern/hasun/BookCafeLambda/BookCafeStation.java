@@ -1,4 +1,4 @@
-package chapter2.BookCafeLmbda;
+package BookCafeLmbda;
 
 public class BookCafeStation {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package chapter2.BookCafe;
+package BookCafe;
 
 public interface Observer {
     public void update();

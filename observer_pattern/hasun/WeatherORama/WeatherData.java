@@ -1,4 +1,4 @@
-package chapter2.WeatherORama;
+package WeatherORama;
 
 import java.util.ArrayList;
 import java.util.List;

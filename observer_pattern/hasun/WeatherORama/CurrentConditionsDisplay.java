@@ -1,4 +1,4 @@
-package chapter2.WeatherORama;
+package WeatherORama;
 
 public class CurrentConditionsDisplay implements Observer, DisplayElement {
     private float temperature;
