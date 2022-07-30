@@ -1,73 +1,48 @@
-interface Beverage {
-    val description: String
-    fun cost(): Double
+
+abstract class Beverage {
+    abstract fun getDescription(): String
+    abstract fun cost(): Double
 }
 
-open class CondimentDecorator(
+abstract class CondimentDecorator() : Beverage() {
+    abstract fun addCoffeeSyrup(): String
+    abstract fun addCost(): Double
+}
+
+class Espresso : Beverage() {
+    override fun getDescription(): String = "에스프레소"
+    override fun cost(): Double = 1.99
+}
+
+class HouseBlend : Beverage() {
+    override fun getDescription(): String = "하우스 블렌드 커피"
+    override fun cost(): Double = .89
+}
+
+class HazelNutSyrup(
     private val beverage: Beverage
-) : Beverage by beverage {
-    override val description: String = beverage.description
+) : CondimentDecorator() {
+    override fun addCoffeeSyrup(): String = " with 헤이즐넛 시럽 &"
+    override fun addCost(): Double = .20
 
-    override fun cost(): Double {
-        return beverage.cost()
-    }
+    override fun getDescription(): String = beverage.getDescription() + addCoffeeSyrup()
+    override fun cost(): Double = beverage.cost() + addCost()
 }
 
-class Espresso(
-    override val description: String = "에스프레소"
-) : Beverage {
+class VanillaSyrup(
+    private val beverage: Beverage
+) : CondimentDecorator() {
+    override fun addCoffeeSyrup(): String = " with 바닐라 시럽 &"
+    override fun addCost(): Double = .5
 
-    override fun cost(): Double {
-        return 1.99
-    }
-}
-
-class HouseBlend(
-    override val description: String = "하우스 블렌드 커피"
-) : Beverage {
-
-    override fun cost(): Double {
-        return .89
-    }
-}
-
-class Mocha(
-    beverage: Beverage
-) : CondimentDecorator(beverage) {
-
-    override val description: String = getDescriptions()
-
-    private fun getDescriptions(): String {
-        return super.description + ", 모카"
-    }
-
-    override fun cost(): Double {
-        return super.cost() + .20
-    }
-}
-
-class Whip(
-    beverage: Beverage
-) : CondimentDecorator(beverage) {
-
-    override val description: String = getDescriptions()
-
-    private fun getDescriptions(): String {
-        return super.description + ", 휘핑"
-    }
-
-    override fun cost(): Double {
-        return super.cost() + .5
-    }
+    override fun getDescription(): String = beverage.getDescription() + addCoffeeSyrup()
+    override fun cost(): Double = beverage.cost() + addCost()
 }
 
 fun main() {
-    val beverage: Beverage = Espresso()
-    println("${beverage.description} $${beverage.cost()}")
+    val espressoWithVanillaSyrup: Beverage = VanillaSyrup(Espresso())
+    println("${espressoWithVanillaSyrup.getDescription().trimEnd('&')} $${espressoWithVanillaSyrup.cost()}")
 
-    var beverage2: Beverage = HouseBlend()
-    beverage2 = Mocha(beverage2)
-    beverage2 = Mocha(beverage2)
-    beverage2 = Whip(beverage2)
-    println("${beverage2.description} $${beverage2.cost()}")
+    val houseBlendWithHazelNutAndVanillaSyrup: Beverage = VanillaSyrup(HazelNutSyrup(HouseBlend()))
+    println("${houseBlendWithHazelNutAndVanillaSyrup.getDescription().trimEnd('&')} $${houseBlendWithHazelNutAndVanillaSyrup.cost()}")
 }
