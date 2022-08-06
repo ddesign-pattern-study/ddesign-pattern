@@ -51,10 +51,15 @@ interface SoftwarePart : Part {
     fun getSoftwareInfo() = "$name [${softwareVersion}]"
 }
 
-abstract class Os : SoftwarePart
+abstract class Os : SoftwarePart {
+    override fun operate() {
+        println("운영체제")
+    }
+}
 
 abstract class Aos : Os() {
     override fun operate() {
+        super.operate()
         println("안드로이드")
     }
 }
