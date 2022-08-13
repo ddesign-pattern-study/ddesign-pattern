@@ -26,11 +26,11 @@ class NYStylePizzaStore(PizzaStore):
         if type == "cheese":
             pizza =  NYStyleCheesePizza()
         elif type == "veggie":
-            pizza = NYStyleVeggiePizza
+            pizza = NYStyleVeggiePizza()
         elif type == "clam":
-            pizza = NYStyleClamPizza
+            pizza = NYStyleClamPizza()
         elif type == "pepperoni":
-            pizza =  NYStylePepperoniPizza
+            pizza =  NYStylePepperoniPizza()
         else:
             pizza = None
         
@@ -44,11 +44,11 @@ class ChicagoStylePizzaStore(PizzaStore):
         if type == "cheese":
             pizza =  ChicagoStyleCheesePizza()
         elif type == "veggie":
-            pizza = ChicagoStyleVeggiePizza
+            pizza = ChicagoStyleVeggiePizza()
         elif type == "clam":
-            pizza = ChicagoStyleClamPizza
+            pizza = ChicagoStyleClamPizza()
         elif type == "pepperoni":
-            pizza =  ChicagoStylePepperoniPizza
+            pizza =  ChicagoStylePepperoniPizza()
         else:
             pizza = None
         
